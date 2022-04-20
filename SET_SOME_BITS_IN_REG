@@ -1,0 +1,9 @@
+/*specific only to 8 bit registers can be made for any other width registers but with some customization
+***INPUTS: R: The 8 bit reg or variable
+           BITS: value in binary like ex: the number of binary bits you wish to change starting from 1 to 8
+           S: The starting bit from where you want to apply the change
+           VAL: The value in binary you would to apply to certain bits in the register taking in concidrationb the BITS number ex: BITS = 3 then the val
+           may vary from 000 to 111 like 001 110 or any other combination
+           
+*/
+#define SET_VAL_8BITS(R,BITS,S,VAL)  R=  (((~((~((unsigned char)0xff << BITS) )<<S )) & R ) | (VAL << S) )
