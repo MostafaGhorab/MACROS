@@ -1,0 +1,6 @@
+
+/******************************Chaining the ternary operator******************************/
+
+
+
+#define BIGGEST(x, y, z) ( (x > y && x > z) ? x : ( y > z) ? y : z ) 
